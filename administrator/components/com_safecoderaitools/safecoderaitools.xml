@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="component" method="upgrade">
+	<name>COM_SAFECODERAITOOLS</name>
+	<author>SafeCoder Software SRL</author>
+	<creationDate>2023-04</creationDate>
+	<copyright>(C) 2012 SafeCoder Software SRL.</copyright>
+	<license>GNU General Public License version 3; see LICENSE.txt</license>
+	<authorEmail>hello@safecoder.com</authorEmail>
+	<authorUrl>www.safecoder.com</authorUrl>
+	<version>1.0.1</version>
+	<description>COM_SAFECODERAITOOLS_XML_DESCRIPTION</description>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install/install.mysql.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall/uninstall.mysql.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<media destination="com_safecoderaitools" folder="media">
+		<folder>plugin</folder>
+		<folder>component</folder>
+	</media>
+
+	<administration>
+		<files folder="admin">
+			<filename>safecoderaitools.xml</filename>
+			<filename>safecoderaitools.php</filename>
+			<filename>LICENSE.txt</filename>
+			<filename>index.html</filename>
+			<filename>controller.php</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<folder>views</folder>
+			<folder>sql</folder>
+			<folder>models</folder>
+			<folder>libraries</folder>
+			<folder>language</folder>
+			<folder>controllers</folder>
+		</files>
+		<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.com_safecoderaitools.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_safecoderaitools.sys.ini</language>
+		</languages>
+		<menu link='index.php?option=com_safecoderaitools&amp;view=safecoderaitools'>
+			COM_SAFECODERAITOOLS
+		</menu>
+		<submenu>
+			<menu link='option=com_safecoderaitools&amp;view=safecoderaitools'>
+				COM_SAFECODERAITOOLS_DASHBOARD
+			</menu>
+			<menu link='option=com_safecoderaitools&amp;view=history'>
+				COM_SAFECODERAITOOLS_HISTORY
+			</menu>
+			<menu link='option=com_safecoderaitools&amp;view=create'>
+				COM_SAFECODERAITOOLS_CREATE_PROMPT
+			</menu>
+		</submenu>
+	</administration>
+</extension>

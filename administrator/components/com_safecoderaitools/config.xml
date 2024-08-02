@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<fieldset
+		name="general"
+		label="COM_SAFECODERAITOOLS_SETUP_LABEL"
+	>
+
+		<fieldset
+			name="general01"
+			label="COM_SAFECODERAITOOLS_SETUP_GENERAL_LABEL"
+		>
+			<field name="OpenAIAPIKey" type="text" default=""
+				label="COM_SAFECODERAITOOLS_SETUP_OPENAI_API_KEY_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_OPENAI_API_KEY_LABEL_DESC" />
+
+		</fieldset>
+
+	</fieldset>
+
+	<fieldset
+		name="openai10"
+		label="COM_SAFECODERAITOOLS_SETUP_LABEL_OPEN_AI"
+	>
+
+		<fieldset
+			name="openai11"
+			label="COM_SAFECODERAITOOLS_SETUP_OPENAI_LABEL"
+		>
+
+			<field
+				name="OpenAIModel"
+				type="list"
+				label="COM_SAFECODERAITOOLS_SETUP_OPENAI_API_MODEL_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_OPENAI_API_MODEL_LABEL_DESC"
+				default="text-davinci-003"
+			>
+				<option value="text-davinci-003">text-davinci-003</option>
+				<option value="text-davinci-002">text-davinci-002</option>
+				<option value="text-curie-001">text-curie-001</option>
+				<option value="text-babbage-001">text-babbage-001</option>
+				<option value="text-ada-001">text-ada-001</option>
+			</field>
+
+			<field name="OpenAIMaxTokens" type="text" default="100"
+				label="COM_SAFECODERAITOOLS_SETUP_OPENAI_MAX_TOKENS_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_OPENAI_MAX_TOKENS_LABEL_DESC" />
+
+			<field name="OpenAITemperature" type="number" default="1"
+				label="COM_SAFECODERAITOOLS_SETUP_OPENAI_API_TEMPERATURE_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_OPENAI_API_TEMPERATURE_LABEL_DESC" min="-2"
+				max="2" step="0.1" />
+
+			<field name="OpenAITopP" type="number" default="1"
+				label="COM_SAFECODERAITOOLS_SETUP_OPENAI_API_TOP_P_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_OPENAI_API_TOP_P_LABEL_DESC" min="0"
+				max="1" step="0.1" />
+
+			<field name="OpenAIIterations" type="number" default="1"
+				label="COM_SAFECODERAITOOLS_SETUP_OPENAI_API_ITERATIONS_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_OPENAI_API_ITERATIONS_LABEL_DESC" min="0"
+				max="5" step="1" />
+
+			<field name="OpenAIPresencePenalty" type="number" default="0"
+				label="COM_SAFECODERAITOOLS_SETUP_OPENAI_API_PRESENCE_PENALTY_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_OPENAI_API_PRESENCE_PENALTY_LABEL_DESC"
+				min="-2"
+				max="2" step="0.1" />
+
+			<field name="OpenAIFrequencyPenalty" type="number" default="0"
+				label="COM_SAFECODERAITOOLS_SETUP_OPENAI_API_FREQUENCY_PENALTY_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_OPENAI_API_FREQUENCY_PENALTY_LABEL_DESC"
+				min="-2"
+				max="2" step="0.1" />
+
+			<field name="PromptToolAdvancedOptions" type="radio" default="0"
+				label="COM_SAFECODERAITOOLS_SETUP_PROMPT_TOOL_ADVANCED_OPTIONS_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_PROMPT_TOOL_ADVANCED_OPTIONS_LABEL_DESC"
+				class="btn-group btn-group-yesno">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+		</fieldset>
+
+		<fieldset
+			name="openai12"
+			label="COM_SAFECODERAITOOLS_SETUP_CONTEXT_LABEL"
+		>
+
+			<field
+				name="ContextArticleContentType"
+				type="list"
+				label="COM_SAFECODERAITOOLS_SETUP_CONTEXT_CONTENT_SELECTION_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_CONTEXT_CONTENT_SELECTION_LABEL_DESC"
+				default="0"
+			>
+				<option value="0">COM_SAFECODERAITOOLS_SETUP_CONTEXT_CONTENT_SELECTION_FULL_LABEL</option>
+				<option value="1">
+					COM_SAFECODERAITOOLS_SETUP_CONTEXT_CONTENT_SELECTION_FULL_REVERSE_LABEL</option>
+				<option value="2">
+					COM_SAFECODERAITOOLS_SETUP_CONTEXT_CONTENT_SELECTION_INTRO_ONLY_LABEL</option>
+				<option value="3">
+					COM_SAFECODERAITOOLS_SETUP_CONTEXT_CONTENT_SELECTION_FULLTEXT_ONLY_LABEL</option>
+			</field>
+
+			<field name="ContextIncludeTitle" type="radio" default="1"
+				label="COM_SAFECODERAITOOLS_SETUP_CONTEXT_INCLUDE_TITLE_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_CONTEXT_INCLUDE_TITLE_LABEL_DESC"
+				class="btn-group btn-group-yesno">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="ContextIncludeFieldContent" type="radio" default="1"
+				label="COM_SAFECODERAITOOLS_SETUP_CONTEXT_INCLUDE_FIELD_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_CONTEXT_INCLUDE_FIELD_LABEL_DESC"
+				class="btn-group btn-group-yesno">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="ContextIncludeFieldBeforeContent" type="radio" default="0"
+				label="COM_SAFECODERAITOOLS_SETUP_CONTEXT_INCLUDE_FIELD_BEFORE_CONTENT_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_CONTEXT_INCLUDE_FIELD_BEFORE_CONTENT_LABEL_DESC"
+				class="btn-group btn-group-yesno">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="ContextCharacterLimit" type="text" default="0"
+				label="COM_SAFECODERAITOOLS_SETUP_CONTEXT_CHARACTER_LIMIT_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_CONTEXT_CHARACTER_LIMIT_LABEL_DESC" />
+
+			<field name="ContextWordLimit" type="text" default="0"
+				label="COM_SAFECODERAITOOLS_SETUP_CONTEXT_WORD_LIMIT_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_CONTEXT_WORD_LIMIT_LABEL_DESC" />
+
+			<field name="ContextSentenceLimit" type="text" default="0"
+				label="COM_SAFECODERAITOOLS_SETUP_CONTEXT_SENTENCE_LIMIT_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_CONTEXT_SENTENCE_LIMIT_LABEL_DESC" />
+
+		</fieldset>
+
+		<fieldset
+			name="openai13"
+			label="COM_SAFECODERAITOOLS_SETUP_CONTEXT_CONTENT_LABEL"
+		>
+
+			<field name="ContextPreText" type="textarea" default=""
+				label="COM_SAFECODERAITOOLS_SETUP_CONTEXT_PRE_TEXT_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_CONTEXT_PRE_TEXT_LABEL_DESC" />
+
+			<field name="ContextPostText" type="textarea" default=""
+				label="COM_SAFECODERAITOOLS_SETUP_CONTEXT_POST_TEXT_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_CONTEXT_POST_TEXT_LABEL_DESC" />
+
+			<field name="UserInputPreText" type="textarea" default=""
+				label="COM_SAFECODERAITOOLS_SETUP_USER_INPUT_PRE_TEXT_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_USER_INPUT_PRE_TEXT_LABEL_DESC" />
+
+			<field name="UserInputPostText" type="textarea" default=""
+				label="COM_SAFECODERAITOOLS_SETUP_USER_INPUT_POST_TEXT_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_USER_INPUT_POST_TEXT_LABEL_DESC" />
+
+		</fieldset>
+
+		<fieldset
+			name="openai14"
+			label="COM_SAFECODERAITOOLS_SETUP_GENERAL_LABEL"
+		>
+
+			<field name="GeneralTypeAnimationEnabled" type="radio" default="1"
+				label="COM_SAFECODERAITOOLS_SETUP_GENERAL_TYPE_ANIMATION_ENABLED_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_GENERAL_TYPE_ANIMATION_ENABLED_LABEL_TEXT"
+				class="btn-group btn-group-yesno">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="GeneralShowSelectedContext" type="radio" default="0"
+				label="COM_SAFECODERAITOOLS_SETUP_GENERAL_SHOW_SELECTED_CONTXT_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_GENERAL_SHOW_SELECTED_CONTXT_LABEL_DESC"
+				class="btn-group btn-group-yesno">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="GeneralShowRequestResponse" type="radio" default="1"
+				label="COM_SAFECODERAITOOLS_SETUP_GENERAL_SHOW_REQUEST_RESPONSE_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_GENERAL_SHOW_REQUEST_RESPONSE_LABEL"
+				class="btn-group btn-group-yesno">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="GeneralShowRequestDetails" type="radio" default="1"
+				label="COM_SAFECODERAITOOLS_SETUP_GENERAL_SHOW_REQUEST_DETAILS_LABEL"
+				description="COM_SAFECODERAITOOLS_SETUP_GENERAL_SHOW_REQUEST_DETAILS_LABEL_DESC"
+				class="btn-group btn-group-yesno">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+		</fieldset>
+
+	</fieldset>
+
+	<fieldset
+		name="predefinedPrompts"
+		label="COM_SAFECODERAITOOLS_SETUP_PROMPT_TOOL_PREDEFINED_LABEL"
+	>
+
+		<field
+			name="predefinedPromptsList"
+			type="subform"
+			label="COM_SAFECODERAITOOLS_SETUP_PROMPT_TOOL_PREDEFINED_LIST_LABEL"
+			description="COM_SAFECODERAITOOLS_SETUP_PROMPT_TOOL_PREDEFINED_LIST_LABEL_DESC"
+			multiple="true"
+			min="0"
+			max="100"
+		>
+			<form>
+				<field
+					name="promptTitle"
+					type="text"
+					label="COM_SAFECODERAITOOLS_SETUP_PROMPT_TOOL_PREDEFINED_LIST_TITLE_LABEL"
+					description="COM_SAFECODERAITOOLS_SETUP_PROMPT_TOOL_PREDEFINED_LIST_TITLE_LABEL_DESC"
+				/>
+				<field
+					name="promptContent"
+					type="textarea"
+					label="COM_SAFECODERAITOOLS_SETUP_PROMPT_TOOL_PREDEFINED_LIST_CONTENT_LABEL"
+					description="COM_SAFECODERAITOOLS_SETUP_PROMPT_TOOL_PREDEFINED_LIST_CONTENT_LABEL_DESC"
+					cols="40"
+					rows="8"
+				/>
+				<field
+					name="promptMaxTokens"
+					type="number"
+					label="COM_SAFECODERAITOOLS_SETUP_OPENAI_MAX_TOKENS_LABEL"
+					description="COM_SAFECODERAITOOLS_SETUP_OPENAI_MAX_TOKENS_LABEL_DESC"
+					default="100"
+				/>
+			</form>
+		</field>
+
+	</fieldset>
+
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+	>
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			validate="rules"
+			filter="rules"
+			section="component"
+			component="com_safecoderaitools"
+		/>
+	</fieldset>
+</config>

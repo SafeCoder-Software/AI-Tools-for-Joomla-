@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_SAFECODER_AI_TOOLS</name>
+    <author>SafeCoder Software SRL</author>
+    <creationDate>2023-04</creationDate>
+    <copyright>(C) 2012 SafeCoder Software SRL.</copyright>
+    <license>GNU General Public License version 3; see LICENSE.txt</license>
+    <authorEmail>hello@safecoder.com</authorEmail>
+    <authorUrl>www.safecoder.com</authorUrl>
+    <version>1.0.1</version>
+    <description>PLG_SYSTEM_SAFECODERAITOOLS_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="safecoderaitools">safecoderaitools.php</filename>
+        <filename>index.html</filename>
+        <filename>LICENSE.txt</filename>
+        <folder>Helper</folder>
+        <folder>language</folder>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/plg_system_safecoderaitools.ini</language>
+        <language tag="en-GB">en-GB/plg_system_safecoderaitools.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="setup" label="PLG_SYSTEM_SAFECODERAITOOLS_SETUP_TOOLBAR">
+
+                <field name="PluginOpenInModal" type="radio" class="btn-group" default="1"
+                    label="PLG_SYSTEM_SAFECODERAITOOLS_SETUP_TOOLBAR_OPEN_PROMPT_IN_MODAL_LABEL"
+                    description="PLG_SYSTEM_SAFECODERAITOOLS_SETUP_TOOLBAR_OPEN_PROMPT_IN_MODAL_LABEL_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="PluginShowCleanPrompt" type="radio" class="btn-group" default="1"
+                    label="PLG_SYSTEM_SAFECODERAITOOLS_SETUP_TOOLBAR_SHOW_CLEAN_PROMPT_LABEL"
+                    description="PLG_SYSTEM_SAFECODERAITOOLS_SETUP_TOOLBAR_SHOW_CLEAN_PROMPT_LABEL_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="PluginShowHistoryButton" type="radio" class="btn-group" default="1"
+                    label="PLG_SYSTEM_SAFECODERAITOOLS_SETUP_TOOLBAR_SHOW_HISTORY_BUTTON_LABEL"
+                    description="PLG_SYSTEM_SAFECODERAITOOLS_SETUP_TOOLBAR_SHOW_HISTORY_BUTTON_LABEL_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="PluginShowPredefinedPrompt" type="radio" class="btn-group" default="1"
+                    label="PLG_SYSTEM_SAFECODERAITOOLS_SETUP_TOOLBAR_SHOW_PREDEFINED_PROMPT_LABEL"
+                    description="PLG_SYSTEM_SAFECODERAITOOLS_SETUP_TOOLBAR_SHOW_PREDEFINED_PROMPT_LABEL_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="PluginPredefinedPromptListReversed" type="radio" class="btn-group" default="0"
+                    label="PLG_SYSTEM_SAFECODERAITOOLS_SETUP_TOOLBAR_SHOW_PREDEFINED_PROMPT_REVERSED_LABEL"
+                    description="PLG_SYSTEM_SAFECODERAITOOLS_SETUP_TOOLBAR_SHOW_PREDEFINED_PROMPT_REVERSED_LABEL_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="PluginPredefinedPromptMax" type="number"
+                    label="PLG_SYSTEM_SAFECODERAITOOLS_SETUP_TOOLBAR_PREDEFINED_PROMPT_LIST_LABEL"
+                    description="PLG_SYSTEM_SAFECODERAITOOLS_SETUP_TOOLBAR_PREDEFINED_PROMPT_LIST_LABEL_DESC"
+                    step="1" min="0" default="3" />
+
+                <field name="PluginShowHelpButton" type="radio" class="btn-group" default="1"
+                    label="PLG_SYSTEM_SAFECODERAITOOLS_SETUP_TOOLBAR_SHOW_HELP_BUTTON_LABEL"
+                    description="PLG_SYSTEM_SAFECODERAITOOLS_SETUP_TOOLBAR_SHOW_HELP_BUTTON_LABEL_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>

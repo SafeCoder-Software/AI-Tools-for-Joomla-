@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_YOOSAFECODERAITOOLS</name>
+    <author>SafeCoder Software SRL</author>
+    <creationDate>2023-04</creationDate>
+    <copyright>(C) 2012 SafeCoder Software SRL.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>hello@safecoder.com</authorEmail>
+    <authorUrl>www.safecoder.com</authorUrl>
+    <version>1.0.0</version>
+    <description>PLG_SYSTEM_YOOSAFECODERAITOOLS_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="yoosafecoderaitools">yoosafecoderaitools.php</filename>
+        <filename>bootstrap.php</filename>
+        <filename>index.html</filename>
+        <filename>LICENSE.txt</filename>
+        <folder>YOOHelper</folder>
+        <folder>src</folder>
+        <folder>language</folder>
+        <folder>assets</folder>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/plg_system_yoosafecoderaitools.ini</language>
+        <language tag="en-GB">en-GB/plg_system_yoosafecoderaitools.sys.ini</language>
+    </languages>
+</extension>

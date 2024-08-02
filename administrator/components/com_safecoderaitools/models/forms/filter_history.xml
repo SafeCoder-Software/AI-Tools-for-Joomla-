@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+            name="search"
+            type="text"
+            label="COM_SAFECODERAITOOLS_SEARCH_TABLE"
+            hint="JSEARCH_FILTER"
+            class="js-stools-search-string"
+        />
+
+        <field
+            name="ArticleItem"
+            type="sql"
+            default=""
+            required="false"
+            label="COM_SAFECODERAITOOLS_SEARCH_SELECT_ARTICLE"
+            hint="COM_SAFECODERAITOOLS_SEARCH_SELECT_ARTICLE"
+            query="SELECT t1.ArticleID as id, t2.title FROM #__safecoder_ai_tools_prompt as t1 LEFT JOIN #__content AS t2 on t1.ArticleID = t2.id WHERE t2.id IS NOT NULL GROUP BY id, t2.title"
+            key_field="id"
+            value_field="title"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_SAFECODERAITOOLS_SEARCH_SELECT_ARTICLE</option>
+        </field>
+
+        <field
+            name="CategoryItem"
+            type="sql"
+            default=""
+            label="COM_SAFECODERAITOOLS_SEARCH_SELECT_CATEGORY"
+            hint="COM_SAFECODERAITOOLS_SEARCH_SELECT_CATEGORY"
+            query="SELECT t1.CategoryID as id, t2.title FROM #__safecoder_ai_tools_prompt as t1 LEFT JOIN #__categories AS t2 on t1.CategoryID = t2.id WHERE t2.id IS NOT NULL GROUP BY id, t2.title"
+            key_field="id"
+            value_field="title"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_SAFECODERAITOOLS_SEARCH_SELECT_CATEGORY</option>
+        </field>
+        <field
+            name="UserIDItem"
+            type="sql"
+            default=""
+            label="COM_SAFECODERAITOOLS_SEARCH_SELECT_USER"
+            hint="COM_SAFECODERAITOOLS_SEARCH_SELECT_USER"
+            query="SELECT t1.UserID as id, t2.name as title FROM #__safecoder_ai_tools_prompt as t1 LEFT JOIN #__users AS t2 on t1.UserID = t2.id WHERE t2.id IS NOT NULL GROUP BY id, title"
+            key_field="id"
+            value_field="title"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_SAFECODERAITOOLS_SEARCH_SELECT_USER</option>
+            <option value="-2">COM_SAFECODERAITOOLS_SEARCH_SELECT_USER_REMOVED</option>
+        </field>
+
+        <field
+            name="searchFullName"
+            type="text"
+            label="COM_SAFECODERAITOOLS_SEARCH_FULL_NAME"
+            hint="COM_SAFECODERAITOOLS_SEARCH_FULL_NAME"
+            class="js-stools-search-string"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="isOK"
+            type="list"
+            default=""
+            required="true"
+            label="COM_SAFECODERAITOOLS_SEARCH_IS_COMPLETE"
+            hint="COM_SAFECODERAITOOLS_SEARCH_IS_COMPLETE"
+            onchange="this.form.submit();">
+            <option value="-1">COM_SAFECODERAITOOLS_SEARCH_IS_COMPLETE</option>
+            <option value="1">JYES</option>
+            <option value="2">JNO</option>
+        </field>
+
+        <field
+            name="completionModel"
+            type="list"
+            default=""
+            required="true"
+            label="COM_SAFECODERAITOOLS_SEARCH_COMPLETION_MODEL"
+            hint="COM_SAFECODERAITOOLS_SEARCH_COMPLETION_MODEL"
+            onchange="this.form.submit();">
+            <option value="none">COM_SAFECODERAITOOLS_SEARCH_COMPLETION_MODEL</option>
+            <option value="text-davinci-003">text-davinci-003</option>
+            <option value="text-davinci-002">text-davinci-002</option>
+            <option value="text-curie-001">text-curie-001</option>
+            <option value="text-babbage-001">text-babbage-001</option>
+            <option value="text-ada-001">text-ada-001</option>
+        </field>
+
+        <field
+            name="searchCompletionID"
+            type="text"
+            label="COM_SAFECODERAITOOLS_SEARCH_COMPLETION_ID"
+            hint="COM_SAFECODERAITOOLS_SEARCH_COMPLETION_ID"
+            class="js-stools-search-string"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="limit"
+            type="limitbox"
+            class="form-select js-select-submit-on-change"
+            default="10"
+            label="COM_SAFECODERAITOOLS_LIMIT"
+            hint="COM_SAFECODERAITOOLS_LIMIT"
+            onchange="this.form.submit();"
+        />
+
+    </fields>
+</form>
